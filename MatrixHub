@@ -1,0 +1,10 @@
+--[[
+	Version V1
+
+	script made by rain (justrainlol), just know this script is still in the works, you cannot disable it once enabled, do not change nil values or script may break
+	changing or tinkering with script may also cause detection and youll get banned :p so be careful and play on a alt
+]]
+
+-- currently the players heads are invisble but i hope to make a change to this today, v2 coming soon
+
+_G.HeadSize = 15 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 1 v.Character.Head.BrickColor = BrickColor.new("Red") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
